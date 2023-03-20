@@ -1,0 +1,172 @@
+*,
+*::before {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  width: 80%;
+  margin: 3em auto 0;
+}
+
+header {
+  padding: 0 0.6em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+h1,
+p {
+  margin-bottom: 0.25em;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+form {
+  background-color: rgba(27, 27, 50, 0.8);
+  padding: 3em 2.5em;
+  border-radius: 0.25em;
+}
+
+form .group {
+  margin: 0 auto 1.5em;
+}
+
+form .controls {
+  display: block;
+  width: 100%;
+  padding: 0.25em 0.65em;
+  color: hsl(210, 5%, 22%);
+  border-radius: 0.375em;
+  border: 0.125em solid hsl(240, 10%, 75%);
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+form .controls:focus {
+  border-color: hsl(240, 53%, 45%);
+  outline: none;
+  box-shadow: 0 0 0 0.125em hsla(240, 53%, 45%, 0.85);
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+}
+
+span {
+  margin-left: 0.3em;
+  font-size: 0.8em;
+  color: #eee;
+}
+
+input,
+select,
+textarea {
+  font-style: italic;
+  font-size: 1.7em;
+  font-family: inherit;
+}
+
+.radio,
+.checkbox {
+  display: inline-block;
+  margin-right: 0.375em;
+  min-width: 0.7em;
+  min-height: 0.7em;
+}
+
+#comments {
+  min-height: 5em;
+  max-height: 10em;
+  width: 100%;
+  resize: vertical;
+  padding: 0.5em;
+  border: 0.125em solid hsl(240, 10%, 75%);
+  border-radius: 0.375em;
+  transition: border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+#comments:focus {
+  border-color: hsl(240, 53%, 45%);
+  outline: none;
+  box-shadow: 0 0 0 0.125em hsla(240, 53%, 45%, 0.85);
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  background-color: #37af65;
+  color: inherit;
+  border-radius: 0.375em;
+  cursor: pointer;
+  padding: 0.5em;
+  border: none;
+}
+
+@media (min-width: 476px) {
+  .container {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  body {
+    font-size: 0.7rem;
+  }
+
+  .container {
+    max-width: 700px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  label {
+    font-size: 1.7em;
+  }
+}
